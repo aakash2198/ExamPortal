@@ -1,0 +1,39 @@
+
+<div class=" mt-5 offset-lg-5">
+  <button type="button" (click)="loadQuestions()" class="btn btn-success">
+    Load Exam
+  </button>
+</div>
+
+<div class="mt-5 col-lg-4 offset-lg-4"><h2>{{ que }}</h2></div>
+<div class="col-lg-4 offset-lg-4 mt-3" style = "display: none;" id="inVar">
+  <ul>
+  <h4>
+   <li> {{op1}} </li>
+  </h4>
+  <h4>
+    <li> {{op2}} </li>
+  </h4>
+  <h4>
+    <li> {{op3}} </li>
+  </h4>
+  <h4>
+    <li> {{op4}} </li>
+  </h4>
+</ul>
+  <input
+    type="text"
+    class="form-control"
+    [formControl]="ans"
+    name="ans"
+    id="ans"
+    placeholder="Enter Answer"
+  />
+</div>
+
+
+<div class="col-md-4 offset-md-8" style = "display: none;" id="subButton">
+  <button type="submit"  (click)="getQuestion()" class="btn btn-success">
+    {{btn}}
+  </button>
+</div>

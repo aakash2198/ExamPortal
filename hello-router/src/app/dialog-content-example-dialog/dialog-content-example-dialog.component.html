@@ -1,0 +1,41 @@
+<div >
+  <form  (ngSubmit)="OnSubmitReg()">
+    <div class="form-group">
+      <label for="exampleInputRollno1">Exam Name</label>
+      <input
+        type="text"
+        class="form-control"
+        [formControl]="examName"
+        name="examName"
+        id="examName"
+        placeholder="Enter Exam Name"
+      />
+    </div>
+    <div class="form-group">
+      <label for="exampleUsername1">Total Marks</label>
+      <input
+        type="number"
+        class="form-control"
+        [formControl]="totalMarks"
+        name="totalMarks"
+        id="totalMarks"
+        placeholder="Enter Total Marks"
+      />
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Passing Marks</label>
+      <input
+        type="number"
+        class="form-control"
+        [formControl]="passingMarks"
+        id="passingMarks"
+        name="passingMarks"
+        placeholder="Enter passing Marks"
+      />
+    </div>
+    <div class="form-group form-check">
+      <button type="button"  class="btn btn-primary">Add Questions</button>
+    </div>
+    <button type="submit" class="btn btn-primary">Signup</button>
+  </form>
+</div>

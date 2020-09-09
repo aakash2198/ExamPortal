@@ -1,0 +1,44 @@
+<div class="container">
+  <table class="table table-striped mt-5">
+    <tr>
+      <th>Exam Id</th>
+      <th>Exam Name</th>
+      <th>Total Marks</th>
+      <th>Passing Marks</th>
+      <th>Score</th>
+      <th></th>
+    </tr>
+
+    <ng-container *ngFor="let item of Marks">
+      <tr>
+        <td>{{ item.examId }}</td>
+        <td>{{ item.examName }}</td>
+        <td>{{ item.totalMarks }}</td>
+        <td>{{ item.passingMarks }}</td>
+        <td>{{ item.score }}</td>
+      </tr>
+    </ng-container>
+
+    <tr>
+      <td>2</td>
+      <td>Java Exam</td>
+      <td>25</td>
+      <td>10</td>
+      <td>15</td>
+    </tr>
+  </table>
+
+  <form>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Select Exam</mat-label>
+      <mat-select [(ngModel)]="selectedValue" (ngModelChange)="myFunc()" name="food">
+        <mat-option *ngFor="let food of exams" [value]="food.value">
+          {{ food.viewValue }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </form>
+
+
+</div>
